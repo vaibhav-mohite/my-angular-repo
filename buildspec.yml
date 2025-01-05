@@ -2,15 +2,15 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: latest
+      nodejs: 12
     commands:
-      - npm install -g @angular/cli@17
+      - npm install -g @angular/cli@9.0.6
   pre_build:
     commands:
       - npm install
   build:
     commands:
-      - ng build -c production
+      - ng build --prod
     finally:
       - echo 'This is the finally block execution!'
 artifacts:
