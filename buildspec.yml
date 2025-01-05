@@ -1,0 +1,34 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+<<<<<<< HEAD
+      nodejs: 20
+=======
+      nodejs: latest
+>>>>>>> 7adebda1d81708caa08a33523c80dd08410d15ba
+    commands:
+      - npm install -g @angular/cli@17
+  pre_build:
+    commands:
+<<<<<<< HEAD
+      - npm install
+  build:
+    commands:
+      - ng build -c production
+    finally:
+      - echo 'This is the finally block execution!'
+artifacts:
+  base-directory: dist/my-angular-project
+  files:
+    - '**/*'
+=======
+       - npm install
+  build:
+    commands:
+      - ng build -c production
+artifacts:
+  base-directory: dist/my-angular-project 
+  files:
+    - '**/*'   
+>>>>>>> 7adebda1d81708caa08a33523c80dd08410d15ba
